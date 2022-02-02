@@ -16,3 +16,7 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get( '/{platform}/{version}/{pool}',           'ApiController@pool' );
+$router->get( '/{platform}/{version}/{pool}/{id}',      'ApiController@object_by_id' );
+$router->get( '/{platform}/{version}/{pool}/{name}',    'ApiController@object_by_name' );
